@@ -8,6 +8,8 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
         {
             while (true)
             {
+                Console.WriteLine("Welcome!");
+                Console.WriteLine("Please enter information about an employee below : ");
                 Console.WriteLine("Notes : (Name's first letter must start with an uppercase letter, name's length should be between 2 and 20, name should only contain letters)");
                 Console.Write("Insert Name : ");
                 string employeeName = Console.ReadLine();
@@ -61,6 +63,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
                 else
                 {
                     Console.WriteLine("Bye");
+                    break;
                 }
             }
         }
