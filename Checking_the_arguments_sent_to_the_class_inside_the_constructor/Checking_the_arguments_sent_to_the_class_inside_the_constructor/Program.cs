@@ -8,28 +8,28 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
         {
             while (true)
             {
-                Console.WriteLine("Notes : (Name's first letter must start with an uppercase letter, name's length should be between 2 and 20, name should only contain letters)");
+                Console.WriteLine("Note : (Name's first letter must start with an uppercase letter, name's length should be between 2 and 20, name should only contain letters)");
                 Console.Write("Insert Name : ");
                 string employeeName = Console.ReadLine();
-                Console.WriteLine("Notes : (Surname's first letter must start with an uppercase letter, surname's length should be between 2 and 35, surname should only contain letters)");
+                Console.WriteLine("Note : (Surname's first letter must start with an uppercase letter, surname's length should be between 2 and 35, surname should only contain letters)");
                 Console.Write("Insert Surname : ");
                 string employeeSurname = Console.ReadLine();
-                Console.WriteLine("Notes : (Father's name's length should be between 2 and 20, Father's name must only contain letters)");
+                Console.WriteLine("Note : (Father's name's length should be between 2 and 20, Father's name must only contain letters)");
                 Console.Write("Insert Father Name : ");
                 string employeeFatherName = Console.ReadLine();
-                Console.WriteLine("Notes : (Age must be between 18 and 65)");
+                Console.WriteLine("Note : (Age must be between 18 and 65)");
                 Console.Write("Insert Age : ");
                 int employeeAge = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Notes : (FIN's length should be equal to 7, FIN can only contain uppercase letters and numbers)");
+                Console.WriteLine("Note : (FIN's length should be equal to 7, FIN can only contain uppercase letters and numbers)");
                 Console.Write("Insert Finn number : ");
                 string employeeFin = Console.ReadLine();
-                Console.WriteLine("Notes : (Telephone number's general length must be equal to 13, telephone number must start with +994 such as ((+994503144847, +994703144846))");
+                Console.WriteLine("Note : (Telephone number's general length must be equal to 13, telephone number must start with +994 such as ((+994503144847, +994703144846))");
                 Console.Write("Insert Telephone number : +");
                 string employeeNumber = Console.ReadLine();
-                Console.WriteLine("Notes : (Position can only be HR, Audit, or Engineer)");
+                Console.WriteLine("Note : (Position can only be HR, Audit, or Engineer)");
                 Console.Write("Insert Position : ");
                 string employeePosition = Console.ReadLine();
-                Console.WriteLine("Notes : (Salary must be between 1500 and 5000)");
+                Console.WriteLine("Note : (Salary must be between 1500 and 5000)");
                 Console.Write("Insert Salary : ");
                 int employeeSalary = Convert.ToInt32(Console.ReadLine());
 
