@@ -37,14 +37,14 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
 
 
                 Employee infoEmployee = new Employee(employeeName, employeeSurname, employeeFatherName, employeeAge, employeeFin, employeeNumber, employeeName, employeeSalary);
-                Console.WriteLine($"Name is {infoEmployee.nameChechker(employeeName)}");
-                Console.WriteLine($"Surname is {infoEmployee.surnameChechker(employeeSurname)}");
-                Console.WriteLine($"Father's name is {infoEmployee.fatherNameChechker(employeeFatherName)}");
-                Console.WriteLine($"Age is {infoEmployee.ageChechker(employeeAge)}");
-                Console.WriteLine($"FIN is {infoEmployee.finChechker(employeeFin)}");
-                Console.WriteLine($"Telephone number is {infoEmployee.numberChechker(employeeNumber)}");
-                Console.WriteLine($"Position is {infoEmployee.positionChechker(employeePosition)}");
-                Console.WriteLine($"Salary is {infoEmployee.salaryChechker(employeeSalary)}");
+                Console.WriteLine($"Name is {infoEmployee.NameChechker(employeeName)}");
+                Console.WriteLine($"Surname is {infoEmployee.SurnameChechker(employeeSurname)}");
+                Console.WriteLine($"Father's name is {infoEmployee.FatherNameChechker(employeeFatherName)}");
+                Console.WriteLine($"Age is {infoEmployee.AgeChechker(employeeAge)}");
+                Console.WriteLine($"FIN is {infoEmployee.FinChechker(employeeFin)}");
+                Console.WriteLine($"Telephone number is {infoEmployee.NumberChechker(employeeNumber)}");
+                Console.WriteLine($"Position is {infoEmployee.PositionChechker(employeePosition)}");
+                Console.WriteLine($"Salary is {infoEmployee.SalaryChechker(employeeSalary)}");
                 Console.WriteLine("Would you like to get information about an employee? Please write 'yes' or 'no' ");
                 string employeeGetInfo = Console.ReadLine();
 
@@ -92,33 +92,33 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
             _employeeSalary = employeeSalary;
         }
 
-        public bool nameChechker(string employeeName)
+        public bool NameChechker(string employeeName)
         {
-            return firstNameMethod(employeeName) && secondNameMethod(employeeName) && thirdNameMethod(employeeName);
+            return FirstNameMethod(employeeName) && SecondNameMethod(employeeName) && ThirdNameMethod(employeeName);
 
         }
 
-        public bool surnameChechker(string employeeSurname)
+        public bool SurnameChechker(string employeeSurname)
         {
-            return firstNameMethod(employeeSurname) && secondSurnameMethod(employeeSurname) && thirdNameMethod(employeeSurname);
+            return FirstNameMethod(employeeSurname) && SecondSurnameMethod(employeeSurname) && ThirdNameMethod(employeeSurname);
         }
 
-        public bool fatherNameChechker(string employeeFatherName)
+        public bool FatherNameChechker(string employeeFatherName)
         {
-            return firstNameMethod(employeeFatherName) && secondNameMethod(employeeFatherName) && thirdNameMethod(employeeFatherName);
+            return FirstNameMethod(employeeFatherName) && SecondNameMethod(employeeFatherName) && ThirdNameMethod(employeeFatherName);
         }
 
-        public bool finChechker(string employeeFin)
+        public bool FinChechker(string employeeFin)
         {
-            return firstFinChecker(employeeFin) && secondFinChecker(employeeFin);
+            return FirstFinChecker(employeeFin) && SecondFinChecker(employeeFin);
         }
 
-        public bool numberChechker(string employeeTelephoneNumber)
+        public bool NumberChechker(string employeeTelephoneNumber)
         {
-            return firstNumberChechker(employeeTelephoneNumber);
+            return FirstNumberChechker(employeeTelephoneNumber);
         }
 
-        public bool firstNameMethod(string employeeName)
+        public bool FirstNameMethod(string employeeName)
         {
             char[] lettersLowerCase = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
 
@@ -133,7 +133,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
             return true;
         }
 
-        public bool secondNameMethod(string employeeName)
+        public bool SecondNameMethod(string employeeName)
         {
             for (int i = 0; i < employeeName.Length; i++)
             {
@@ -146,7 +146,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
             return true;
         }
 
-        public bool thirdNameMethod(string employeeName)
+        public bool ThirdNameMethod(string employeeName)
         {
             char[] letters = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
 
@@ -161,7 +161,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
             return false;
         }
 
-        public bool secondSurnameMethod(string employeeSurname)
+        public bool SecondSurnameMethod(string employeeSurname)
         {
             for (int i = 0; i < employeeSurname.Length; i++)
             {
@@ -174,7 +174,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
             return true;
         }
 
-        public bool ageChechker(int employeeAge)
+        public bool AgeChechker(int employeeAge)
         {
             if (employeeAge <= 18 || employeeAge >= 65)
             {
@@ -185,7 +185,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
 
         }
 
-        public bool firstFinChecker(string employeeFin)
+        public bool FirstFinChecker(string employeeFin)
         {
             for (int i = 0; i < employeeFin.Length; i++)
             {
@@ -197,7 +197,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
 
             return true;
         }
-        public bool secondFinChecker(string employeeFin)
+        public bool SecondFinChecker(string employeeFin)
         {
             char[] letters = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
 
@@ -215,7 +215,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
             return false;
         }
 
-        public bool firstNumberChechker(string employeeTelephoneNumber)
+        public bool FirstNumberChechker(string employeeTelephoneNumber)
         {
             foreach (char element in employeeTelephoneNumber)
             {
@@ -228,7 +228,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
             return true;
         }
 
-        public bool positionChechker(string employeePosition)
+        public bool PositionChechker(string employeePosition)
         {
             if (employeePosition != "HR" && employeePosition != "Audit" && employeePosition != "Engineer")
             {
@@ -238,7 +238,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
             return true;
         }
 
-        public bool salaryChechker(int employeeSalary)
+        public bool SalaryChechker(int employeeSalary)
         {
             if (employeeSalary < 1500 || employeeSalary > 5000)
             {
