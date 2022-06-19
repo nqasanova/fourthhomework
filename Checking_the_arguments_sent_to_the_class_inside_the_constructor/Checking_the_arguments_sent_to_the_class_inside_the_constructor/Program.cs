@@ -117,15 +117,16 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
 
         public bool FirstNameMethod(string employeeName)
         {
-            char[] alphabetLower = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+            char[] lettersLowerCase = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
 
-            for (int i = 0; i < alphabetLower.Length; i++)
+            for (int i = 0; i < lettersLowerCase.Length; i++)
             {
-                if (employeeName[0] == alphabetLower[i])
+                if (employeeName[0] == lettersLowerCase[i])
                 {
                     return false;
                 }
             }
+
             return true;
         }
 
@@ -138,20 +139,22 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
                     return false;
                 }
             }
+
             return true;
         }
 
         public bool ThirdNameMethod(string employeeName)
         {
-            char[] alphabet = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+            char[] letters = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
 
-            for (int i = 0; i < alphabet.Length; i++)
+            for (int i = 0; i < letters.Length; i++)
             {
-                if (employeeName[0] == alphabet[i])
+                if (employeeName[0] == letters[i])
                 {
                     return true;
                 }
             }
+
             return false;
         }
 
@@ -164,6 +167,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
                     return false;
                 }
             }
+
             return true;
         }
 
@@ -173,6 +177,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
             {
                 return false;
             }
+
             return true;
 
         }
@@ -186,34 +191,37 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
                     return false;
                 }
             }
+
             return true;
         }
         public bool SecondFinCheck(string employeeFin)
         {
-            char[] alphabets = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+            char[] letters = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
 
-            for (int i = 0; i < alphabets.Length; i++)
+            for (int i = 0; i < letters.Length; i++)
             {
                 for (int k = 0; k < employeeFin.Length; k++)
                 {
-                    if (employeeFin[k] == alphabets[i])
+                    if (employeeFin[k] == letters[i])
                     {
                         return true;
                     }
                 }
             }
+
             return false;
         }
 
         public bool FirstNumberChechk(string employeeTelephoneNumber)
         {
-            foreach (char elem in employeeTelephoneNumber)
+            foreach (char element in employeeTelephoneNumber)
             {
-                if (elem < '0' || elem > '9' || employeeTelephoneNumber.Length < 12 || employeeTelephoneNumber.Length > 12)
+                if (element < '0' || element > '9' || employeeTelephoneNumber.Length < 12 || employeeTelephoneNumber.Length > 12)
                 {
                     return false;
                 }
             }
+
             return true;
         }
 
@@ -223,6 +231,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
             {
                 return false;
             }
+
             return true;
         }
 
@@ -232,6 +241,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
             {
                 return false;
             }
+
             return true;
         }
     }
