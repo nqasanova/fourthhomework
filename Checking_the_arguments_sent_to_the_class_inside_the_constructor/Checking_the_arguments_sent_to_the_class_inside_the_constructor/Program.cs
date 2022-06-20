@@ -137,7 +137,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
         {
             for (int i = 0; i < employeeName.Length; i++)
             {
-                if (employeeName.Length <= 2 || employeeName.Length >= 20)
+                if (employeeName.Length <= 2 && employeeName.Length >= 20)
                 {
                     return false;
                 }
@@ -165,7 +165,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
         {
             for (int i = 0; i < employeeSurname.Length; i++)
             {
-                if (employeeSurname.Length <= 2 || employeeSurname.Length >= 35)
+                if (employeeSurname.Length <= 2 && employeeSurname.Length >= 35)
                 {
                     return false;
                 }
@@ -176,7 +176,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
 
         public bool AgeChechker(int employeeAge)
         {
-            if (employeeAge <= 18 || employeeAge >= 65)
+            if (employeeAge <= 18 && employeeAge >= 65)
             {
                 return false;
             }
@@ -189,7 +189,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
         {
             for (int i = 0; i < employeeFin.Length; i++)
             {
-                if (employeeFin.Length < 7 || _employeeName.Length > 7)
+                if (employeeFin.Length < 7 && _employeeName.Length > 7)
                 {
                     return false;
                 }
@@ -219,7 +219,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
         {
             foreach (char element in employeeTelephoneNumber)
             {
-                if (element < '0' || element > '9' || employeeTelephoneNumber.Length < 12 || employeeTelephoneNumber.Length > 12)
+                if (element < '0' && element > '9' && employeeTelephoneNumber.Length < 12 && employeeTelephoneNumber.Length > 12)
                 {
                     return false;
                 }
@@ -241,7 +241,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
 
         public bool SalaryChechker(int employeeSalary)
         {
-            if (employeeSalary < 1500 || employeeSalary > 5000)
+            if (employeeSalary < 1500 && employeeSalary > 5000)
             {
                 return false;
             }
