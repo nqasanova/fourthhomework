@@ -10,28 +10,28 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
             {
                 Console.WriteLine("Welcome!");
                 Console.WriteLine("Please enter information about an employee below : ");
-                Console.WriteLine("Note : (Name's first letter must start with an uppercase letter, name's length should be between 2 and 20, name should only contain letters)");
+                Console.WriteLine("Notes : (Name's first letter must start with an uppercase letter, name's length should be between 2 and 20, name should only contain letters)");
                 Console.Write("Insert Name : ");
                 string employeeName = Console.ReadLine();
-                Console.WriteLine("Note : (Surname's first letter must start with an uppercase letter, surname's length should be between 2 and 35, surname should only contain letters)");
+                Console.WriteLine("Notes : (Surname's first letter must start with an uppercase letter, surname's length should be between 2 and 35, surname should only contain letters)");
                 Console.Write("Insert Surname : ");
                 string employeeSurname = Console.ReadLine();
-                Console.WriteLine("Note : (Father's name's length should be between 2 and 20, Father's name must only contain letters)");
+                Console.WriteLine("Notes : (Father's name's length should be between 2 and 20, Father's name must only contain letters)");
                 Console.Write("Insert Father Name : ");
                 string employeeFatherName = Console.ReadLine();
-                Console.WriteLine("Note : (Age must be between 18 and 65)");
+                Console.WriteLine("Notes : (Age must be between 18 and 65)");
                 Console.Write("Insert Age : ");
                 int employeeAge = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Note : (FIN's length should be equal to 7, FIN can only contain uppercase letters and numbers)");
+                Console.WriteLine("Notes : (FIN's length should be equal to 7, FIN can only contain uppercase letters and numbers)");
                 Console.Write("Insert Finn number : ");
                 string employeeFin = Console.ReadLine();
-                Console.WriteLine("Note : (Telephone number's general length must be equal to 13, telephone number must start with +994 such as ((+994503144847, +994703144846))");
+                Console.WriteLine("Notes : (Telephone number's general length must be equal to 13, telephone number must start with +994 such as ((+994503144847, +994703144846))");
                 Console.Write("Insert Telephone number : +");
                 string employeeNumber = Console.ReadLine();
-                Console.WriteLine("Note : (Position can only be HR, Audit, or Engineer)");
+                Console.WriteLine("Notes : (Position can only be HR, Audit, or Engineer)");
                 Console.Write("Insert Position : ");
                 string employeePosition = Console.ReadLine();
-                Console.WriteLine("Note : (Salary must be between 1500 and 5000)");
+                Console.WriteLine("Notes : (Salary must be between 1500 and 5000)");
                 Console.Write("Insert Salary : ");
                 int employeeSalary = Convert.ToInt32(Console.ReadLine());
 
@@ -94,18 +94,18 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
 
         public bool NameChechker(string employeeName)
         {
-            return FirstNameMethod(employeeName) && SecondNameMethod(employeeName) && ThirdNameMethod(employeeName);
+            return FirstNameChechker(employeeName) && SecondNameChechker(employeeName) && ThirdNameChechker(employeeName);
 
         }
 
         public bool SurnameChechker(string employeeSurname)
         {
-            return FirstNameMethod(employeeSurname) && SecondSurnameMethod(employeeSurname) && ThirdNameMethod(employeeSurname);
+            return FirstNameChechker(employeeSurname) && SecondSurnameChechker(employeeSurname) && ThirdNameChechker(employeeSurname);
         }
 
         public bool FatherNameChechker(string employeeFatherName)
         {
-            return FirstNameMethod(employeeFatherName) && SecondNameMethod(employeeFatherName) && ThirdNameMethod(employeeFatherName);
+            return FirstNameChechker(employeeFatherName) && SecondNameChechker(employeeFatherName) && ThirdNameChechker(employeeFatherName);
         }
 
         public bool FinChechker(string employeeFin)
@@ -118,7 +118,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
             return FirstNumberChechker(employeeTelephoneNumber);
         }
 
-        public bool FirstNameMethod(string employeeName)
+        public bool FirstNameChechker(string employeeName)
         {
             char[] lettersLowerCase = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
 
@@ -133,7 +133,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
             return true;
         }
 
-        public bool SecondNameMethod(string employeeName)
+        public bool SecondNameChechker(string employeeName)
         {
             for (int i = 0; i < employeeName.Length; i++)
             {
@@ -146,7 +146,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
             return true;
         }
 
-        public bool ThirdNameMethod(string employeeName)
+        public bool ThirdNameChechker(string employeeName)
         {
             char[] letters = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
 
@@ -161,7 +161,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
             return false;
         }
 
-        public bool SecondSurnameMethod(string employeeSurname)
+        public bool SecondSurnameChechker(string employeeSurname)
         {
             for (int i = 0; i < employeeSurname.Length; i++)
             {
@@ -236,6 +236,7 @@ namespace Checking_the_arguments_sent_to_the_class_inside_the_constructor
             }
 
             return true;
+
         }
 
         public bool SalaryChechker(int employeeSalary)
